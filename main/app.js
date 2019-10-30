@@ -1,17 +1,10 @@
 function distance(first, second){
 	//TODO: implementați funcția
 	// TODO: implement the function
-    try{
-        if(!(first instanceof Array)) {
-            throw 'InvalidType'
-        }
-        if(!(second instanceof Array)){
-             throw 'InvalidType'
-        }
+        if(!( Array.isArray(first)) ||!( Array.isArray(second)) ) {
+            throw new Error("InvalidType") 
    }
-    catch(err){
-	    console.warn(err.stack)
-    }
+
 
    let i=0;
    let len=0;
